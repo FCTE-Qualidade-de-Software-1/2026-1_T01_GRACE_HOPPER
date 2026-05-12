@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkclassic=self.webpackChunkclassic||[]).push([["145"],{6148(e){e.exports=JSON.parse('{"metadata":{"permalink":"/2026-1_T01_GRACE_HOPPER/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":0,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
