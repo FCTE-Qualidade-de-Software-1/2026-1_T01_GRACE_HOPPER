@@ -1,42 +1,80 @@
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import Link from "@docusaurus/Link";
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Layout from "@theme/Layout";
 
-import Heading from '@theme/Heading';
-import styles from './index.module.css';
+import styles from "./index.module.css";
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+const quickLinks = [
+  {
+    title: "Fase 1",
+    description: "Fase 1 da avaliação do Mural UnB.",
+    to: "/docs/Fase1",
+  },
+];
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const homeImageBasePath = useBaseUrl("/img/home/");
+
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
+      title="Página Inicial"
+      description="Estrutura organizacional e navegação principal do projeto"
+    >
+      <main className={styles.page}>
+        <section className={styles.heroSection} aria-labelledby="home-title">
+          <div className={styles.heroContent}>
+            <p className={styles.heroEyebrow}>Documentação do Projeto</p>
+            <h1 id="home-title" className={styles.heroTitle}>
+              Qualidade de Software
+            </h1>
+            <p className={styles.heroDescription}>
+              Avaliação do projeto Mural UnB.
+            </p>
+          </div>
+
+          <div className={styles.heroActions}>
+            <Link className={styles.primaryLink} to="/docs/intro">
+              Acessar documentação
+            </Link>
+            <Link
+              className={styles.secondaryLink}
+              href="https://github.com/Diogo-Barboza/QSW-MuralUnBCheck"
+            >
+              Ver repositório no GitHub
+            </Link>
+          </div>
+        </section>
+
+        <section
+          className={styles.linksSection}
+          aria-labelledby="quick-links-title"
+        >
+          <div className={styles.sectionHeader}>
+            <h2 id="quick-links-title" className={styles.sectionTitle}>
+              Navegação rápida
+            </h2>
+            <p className={styles.sectionDescription}>
+              Acesse diretamente os principais blocos da documentação para
+              localizar o contexto geral e os artefatos de cada subsistema.
+            </p>
+          </div>
+
+          <div className={styles.linksGrid}>
+            {quickLinks.map((item) => (
+              <Link key={item.title} className={styles.linkCard} to={item.to}>
+                <div className={styles.linkCardHeader}>
+                  <span className={styles.linkCardTitle}>{item.title}</span>
+                  <span className={styles.linkCardDescription}>
+                    {item.description}
+                  </span>
+                </div>
+                <div className={styles.linkCardButton}>
+                  Acessar <span aria-hidden="true">&rarr;</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
       </main>
     </Layout>
   );
