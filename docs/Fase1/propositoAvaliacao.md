@@ -15,9 +15,18 @@ Também podem ser considerados stakeholders indiretos os responsáveis pela infr
 
 ---
 
+| Campo                | Descrição                                                       |
+| -------------------- | --------------------------------------------------------------- |
+| Analisar             | O sistema Mural UnB                                             |
+| Para o propósito de  | Entender e avaliar a viabilidade técnica e a experiência de uso |
+| Com respeito a       | Eficiência de Desempenho e Portabilidade                        |
+| Do ponto de vista da | Equipe de desenvolvimento e Usuários finais                     |
+| No contexto de       | Uso real em dispositivos diversos e ambiente de produção        |
+
+---
+
 ## Propósito da Avaliação e Uso Pretendido dos Resultados
 
 A presente avaliação tem como propósito analisar a qualidade do software Mural UnB com foco nas características de eficiência de desempenho, portabilidade e adequação funcional, conforme definido pelo modelo SQuaRE. A avaliação busca verificar se a plataforma atende adequadamente às necessidades da comunidade acadêmica, considerando aspectos relacionados ao tempo de resposta, compatibilidade entre diferentes dispositivos e navegadores, além da capacidade do sistema de oferecer funcionalidades compatíveis com seus objetivos propostos.
 
 Os resultados obtidos serão utilizados para identificar pontos fortes, limitações e possíveis oportunidades de melhoria na plataforma. Além disso, os dados levantados poderão auxiliar futuras decisões relacionadas à manutenção, evolução e otimização do sistema, contribuindo para uma melhor experiência dos usuários e maior qualidade do produto de software avaliado.
-
