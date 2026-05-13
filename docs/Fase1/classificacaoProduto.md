@@ -5,4 +5,6 @@ sidebar_position: 4
 
 # 3. Classificação do Tipo de Produto
 
-(Identifique e classifique o tipo de produto de software que está sendo avaliado)
+O Mural UnB pode ser classificado como uma aplicação web cliente-servidor, pois sua execução ocorre de forma centralizada em servidores acessados remotamente pelos usuários através de navegadores. O sistema também se enquadra como um software colaborativo, já que suas funcionalidades dependem diretamente da interação entre usuários por meio da criação, organização e compartilhamento de conteúdos.
+
+Sob a perspectiva funcional, o software pertence à categoria de sistemas de informação, uma vez que seu principal objetivo é coletar, armazenar, organizar e disponibilizar informações para a comunidade acadêmica, a eficiência será avaliada sob a perspectiva do volume de dados carregados na interface. Além disso, por utilizar acesso remoto, múltiplos usuários simultâneos e integração entre frontend (principal objetivo para os teste de portabilidade), backend e banco de dados, o sistema apresenta características típicas de plataformas modernas baseadas em serviços web, isso torna a portabilidade (substituibilidade de navegador) um critério crítico de sucesso.
