@@ -23,10 +23,10 @@ O projeto é mantido por uma equipe multidisciplinar de estudantes da FGA, o foc
 
 | Matrícula  | Aluno                   |
 | ---------- | ----------------------- |
-| 22/2       | Ana Carolina            |
-| XX/X       | Davi Negreiros          |
-| XX/X       | João Guimarães          |
-| XX/X       | Raissa Oliveira         |
+| 22/1031102       | Ana Carolina            |
+| 23/2013971       | Davi Negreiros          |
+| 23/2014709       | João Guimarães          |
+| 23/2014763       | Raissa Oliveira         |
 | 22/2006660 | Diogo Rodrigues Barboza |
 
 </div>
