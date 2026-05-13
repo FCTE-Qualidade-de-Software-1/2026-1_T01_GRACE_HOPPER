@@ -6,11 +6,11 @@ title: Fase 1 - Requisitos de Avaliação
 
 ## Objetivo
 
-Executar a Fase 1 para definir os requisitos de avaliação da qualidade do software selecionado pela equipe, incluindo:
+Executar a Fase 1 para definir os requisitos de avaliação da qualidade do **Mural-UnB**, uma plataforma web da Universidade de Brasília voltada à centralização e recomendação de oportunidades acadêmicas e profissionais, incluindo:
 
-- **a)** Propósito da avaliação;
-- **b)** Identificação do tipo de produto;
-- **c)** Especificação inicial do modelo de qualidade.
+- **a)** a definição do propósito da avaliação e do uso pretendido dos resultados;
+- **b)** a identificação e classificação do tipo de produto avaliado;
+- **c)** a especificação inicial do modelo de qualidade a ser adotado, orientada pelas características priorizadas pela equipe.
 
 ---
 
@@ -47,7 +47,18 @@ _(Apresente a lista das características de qualidade escolhidas **(exceto usabi
 
 ### 7. Escopo, Profundidade e Objetos de Avaliação
 
-_(Declare a abrangência e a profundidade da avaliação. Explique também como ela se relaciona com avaliações anteriores ou futuras, se aplicável)_
+Esta avaliação abrange o **produto web em uso pelo usuário final**, isto é, a aplicação de consulta do Mural-UnB hospedada em ambiente de publicação estática, incluindo suas páginas de navegação, feed de oportunidades, mecanismos de busca, filtros, recomendação por tags e consumo dos dados estáticos que sustentam a experiência da plataforma.
+
+A profundidade da análise será **de produto e de experiência de execução**, sem entrar na implementação interna de scripts de ingestão ou na infraestrutura de processamento offline. O foco será observar como o sistema se comporta em cenários reais de uso, especialmente sob as características priorizadas pela equipe: **Eficiência de Desempenho** e **Portabilidade**.
+
+Como objetos de avaliação, consideram-se:
+
+- a interface web acessada pelos estudantes;
+- as interações de navegação, pesquisa e recomendação;
+- o tempo de resposta percebido nas principais ações;
+- o comportamento da aplicação em diferentes navegadores, sistemas operacionais e tamanhos de tela.
+
+Esta Fase 1 estabelece a base conceitual e o recorte inicial da avaliação. Em fases posteriores, os resultados podem ser aprofundados com medições comparativas, testes em novos cenários de uso e verificação de compatibilidade em versões futuras da plataforma.
 
 ### 8. ODS Relacionados e Metas Associadas
 
