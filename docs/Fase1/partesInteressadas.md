@@ -5,4 +5,12 @@ sidebar_position: 2
 
 # 1. Requisitante e Partes Interessadas
 
-(Identifique e descreva quem são os requisitantes e as partes interessadas: comprador, fornecedor, desenvolvedor, operador, etc.)
+O Mural UnB possui diferentes grupos que interagem direta ou indiretamente com a plataforma. A tabela a seguir identifica as partes interessadas no processo de avaliação da qualidade do sistema, seus papéis e interesses.
+
+| Categoria       | Envolvido                              | Papel no Sistema                                                      | Interesse na Avaliação                                                     |
+| --------------- | -------------------------------------- | --------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| Usuários finais | Estudantes da UnB                      | Utilizam a plataforma para acessar informações e conteúdos acadêmicos | Avaliar a estabilidade, segurança e bom desempenho                         |
+| Usuários finais | Comunidade acadêmica                   | Acessam conteúdos e utilizam funcionalidades da plataforma            | Avaliar a facilidade de acesso às informações e disponibilidade do sistema |
+| Desenvolvedor   | Equipe de desenvolvimento do Mural UnB | Mantém e evolui o sistema                                             | Avaliar falhas, limitações e oportunidades de melhoria                     |
+
+Para a avaliação do Mural UnB, a análise foca nos pontos de vista da Equipe de Desenvolvimento e dos Estudantes da UnB, esta escolha foi feita pelo fato de que a Eficiência de Desempenho impacta diretamente a retenção dos usuários no sistema, enquanto a Portabilidade garante a inclusão digital de estudantes que utilizam diferentes sistemas operacionais e navegadores para acessar as oportunidades acadêmicas.
