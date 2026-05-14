@@ -8,7 +8,7 @@ const quickLinks = [
   {
     title: "Fase 1",
     description: "Fase 1 da avaliação do Mural UnB.",
-    to: "/docs/Fase1",
+    to: "/docs/category/fase-1",
   },
 ];
 

@@ -20,13 +20,29 @@ O projeto é mantido por uma equipe multidisciplinar de estudantes da FGA, o foc
     <td align="center"><a href="https://github.com/Diogo-Barboza"><img style={{borderRadius: '50%'}} src="https://github.com/Diogo-Barboza.png" width="190" alt=""/><br /><sub><b>Diogo Barboza </b></sub></a><br /><a href="Link git" title="Rocketseat"></a></td>
   </tr>
 </table>
-
-| Matrícula  | Aluno                   |
-| ---------- | ----------------------- |
-| 22/1031102       | Ana Carolina            |
-| 23/2013971       | Davi Negreiros          |
-| 23/2014709       | João Guimarães          |
-| 23/2014763       | Raissa Oliveira         |
-| 22/2006660 | Diogo Rodrigues Barboza |
-
 </div>
+
+## Tabela de Contribuição
+
+| Matrícula  | Aluno                   | Contribuição |
+| ---------- | ----------------------- | ------------ |
+| 22/1031102 | Ana Carolina            | 20%          |
+| 23/2013971 | Davi Negreiros          | 20%          |
+| 23/2014709 | João Guimarães          | 20%          |
+| 23/2014763 | Raissa Oliveira         | 20%          |
+| 22/2006660 | Diogo Rodrigues Barboza | 20%          |
+
+---
+
+# Referências
+
+Abaixo estão listadas as referências bibliográficas e normativas utilizadas na Fase 1.
+
+### Normas Técnicas
+
+- **ISO/IEC 25002:2024.** _Systems and software engineering — Quality requirements and evaluation of platforms and software (SQuaRE) — Overview and conceptual model_. International Organization for Standardization. Disponível em: [https://www.iso.org/obp/ui/en/#iso:std:iso-iec:25002:ed-1:v1:en](https://www.iso.org/obp/ui/en/#iso:std:iso-iec:25002:ed-1:v1:en).
+
+### Literatura Acadêmica
+
+- **PAULA, R. S.** _Uma proposta de métricas para avaliação de usabilidade e acessibilidade em portais de transparência_. Monografia (Graduação em Ciência da Computação) - Universidade Federal de Ouro Preto, João Monlevade, 2023. Disponível em: [https://monografias.ufop.br/handle/35400000/6509](https://monografias.ufop.br/handle/35400000/6509).
+- **SOUZA, L. F.** _Avaliação da qualidade de software: um estudo de caso aplicado a um sistema de gestão acadêmica_. Monografia (Graduação em Ciência da Computação) - Universidade Federal de Ouro Preto, João Monlevade, 2018. Disponível em: [https://monografias.ufop.br/handle/35400000/365](https://monografias.ufop.br/handle/35400000/365).
