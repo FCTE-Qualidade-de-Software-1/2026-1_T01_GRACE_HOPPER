@@ -93,8 +93,8 @@ const config = {
             label: "Introdução",
           },
           {
-            href: "https://github.com/Diogo-Barboza/QSW-MuralUnBCheck",
-            label: "GitLab",
+            href: "https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T01_GRACE_HOPPER",
+            label: "GitHub",
             position: "right",
           },
         ],

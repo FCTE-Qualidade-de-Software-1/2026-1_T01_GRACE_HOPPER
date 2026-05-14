@@ -38,7 +38,7 @@ export default function Home() {
             </Link>
             <Link
               className={styles.secondaryLink}
-              href="https://github.com/Diogo-Barboza/QSW-MuralUnBCheck"
+              href="https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T01_GRACE_HOPPER"
             >
               Ver repositório no GitHub
             </Link>
