@@ -1,0 +1,10 @@
+flowchart TB
+  P["Portabilidade"]
+  P --> Q1P["Q1: Compatibilidade por navegador"]
+  P --> Q2P["Q2: Diferenças funcionais entre plataformas"]
+  P --> Q3P["Q3: Reprodutibilidade do deploy"]
+  P --> Q4P["Q4: Componentes problemáticos"]
+  Q1P --> M1P["M1: % funções funcionando por navegador"]
+  Q2P --> M2P["M2: Defeitos por navegador"]
+  Q3P --> M4P["M4: Tempo/complexidade do deploy"]
+  Q4P --> M3P["M3: % breakpoints com layout comprometido"]
