@@ -10,6 +10,21 @@ const quickLinks = [
     description: "Fase 1 da avaliação do Mural UnB.",
     to: "/docs/category/fase-1",
   },
+  {
+    title: "Fase 2",
+    description: "Fase 2 da avaliação do Mural UnB.",
+    to: "/docs/category/fase-2",
+  },
+  {
+    title: "Fase 3",
+    description: "Fase 3 da avaliação do Mural UnB.",
+    to: "/docs/category/fase-3",
+  },
+  {
+    title: "Fase 4",
+    description: "Fase 4 da avaliação do Mural UnB.",
+    to: "/docs/category/fase-4",
+  },
 ];
 
 export default function Home() {
