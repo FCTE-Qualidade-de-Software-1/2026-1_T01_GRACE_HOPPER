@@ -1,4 +1,9 @@
-# Fase 2 — Modelo GQM (índice)
+---
+title: Modelo GQM (índice)
+sidebar_position: 1
+---
+
+# Modelo GQM (índice)
 
 ## Introdução ao GQM
 GQM (Goal–Question–Metric) é uma abordagem estruturada para transformar objetivos de qualidade em medidas observáveis. Primeiro define-se um objetivo (Goal), depois formulam-se questões (Questions) que explicitem que aspecto do objetivo será avaliado, e finalmente escolhem-se métricas (Metrics) que respondam essas questões de forma mensurável e defensável. Neste conjunto de arquivos aplicamos GQM para cada característica de qualidade selecionada, propondo métricas simples e rubricas para facilitar coleta e interpretação.

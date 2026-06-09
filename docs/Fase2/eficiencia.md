@@ -1,43 +1,54 @@
+---
+title: Eficiência de Desempenho
+sidebar_position: 3
+---
+
 # Eficiência de Desempenho — Modelo GQM
 
-## Objetivo GQM
-- Analisar o sistema Mural UnB
-- Com o propósito de avaliar tempos de resposta e uso de recursos sob cargas típicas e de pico
-- Com respeito a Eficiência de Desempenho (comportamento temporal, utilização de recursos, capacidade)
-- Sob o ponto de vista de Estudantes da UnB
-- No contexto de operação web com acesso simultâneo via navegador e chamadas ao backend
+A Eficiência de Desempenho refere-se ao tempo de resposta, taxa de transferência e uso de recursos do sistema em condições normais de uso e picos de acesso.
 
-## Questões
-1. Quais são os tempos de resposta percebidos para as operações críticas (carregamento do feed, pesquisas, requisições de recomendação) sob carga normal?
-2. Como se comporta o sistema em condições de carga aumentada (escalabilidade e degradação)?
-3. Qual a utilização média de recursos (CPU, memória, I/O) por operação/pedido?
-4. A latência percebida impacta a aceitabilidade do usuário (abandonos, tempo na página)?
+## 1. Nível Conceitual: Objetivo de Medição (GQM)
 
-## Hipóteses (padronizadas)
-1. Pelo menos 95% das requisições das operações críticas são respondidas em menos de 5 segundos em condições normais de uso.
-2. Sob aumento de carga até X usuários simultâneos (X a definir na fase experimental), pelo menos 90% das requisições continuam a receber resposta adequada, sem falhas catastróficas.
-3. A utilização média de recursos por pedido permanece dentro dos limites operacionais definidos pelo ambiente de hospedagem (CPU, memória e I/O).
-4. Aumento significativo na latência está associado a um aumento mensurável na taxa de abandono das sessões de usuário.
+O objetivo a seguir atende aos requisitos do template GQM, alinhando-se à necessidade de velocidade e fluidez na interação, priorizadas na Fase 1.
 
-## Métricas (simplificadas)
-- M1 — Tempo médio de resposta por operação (ms): `avg(response_time)`; e percentual de requisições com resposta <= 2s.
-- M2 — Throughput (requests/s) para operações críticas.
-- M3 — Utilização de recursos por unidade de tempo (CPU %, memória MB) durante testes: média e pico.
-- M4 — Taxa de erro sob carga: `errors / total_requests`.
-- M5 — Taxa de abandono relacionada à latência: `% sessões que encerraram antes de completar a interação por tempo de resposta alta` (analytics).
+*   **Analisar:** O frontend (plataforma web) do Mural UnB.
+*   **Para o propósito de:** Avaliar a resposta temporal e uso de recursos (performance).
+*   **Com respeito à:** Eficiência de Desempenho (Comportamento Temporal e Capacidade).
+*   **Do ponto de vista de:** Usuários Finais (Estudantes da UnB) que acessam via navegadores.
+*   **No contexto de:** Carregamento de páginas, feeds de oportunidades e renderização de elementos na plataforma de produção.
 
-## Tabela resumida
+## 2. Nível Operacional: Questões e Hipóteses
 
-| Questão | Métrica(s) principal(is) | Rubrica (exemplo) |
-|---|---|---|
-| Tempos de resposta | M1: tempo médio & % <=2s | 5: avg <1.5s & >=95% requests<=2s — 1: avg>5s |
-| Comportamento sob carga | M2: throughput & erros | medir degradação por intervalo de carga |
-| Utilização de recursos | M3: CPU/mem médios e picos | limites operacionais definidos |
-| Impacto na aceitabilidade | M5: taxa de abandono por latência | 5: <2% — 1: >20% |
+As questões foram definidas de forma a isolar as principais preocupações de desempenho web para a plataforma.
 
-_Tabela — Resumo das questões, métricas e rubricas para Eficiência de Desempenho._
+*   **Q1:** Qual o tempo de carregamento da página principal e do feed de vagas para o usuário?
+    *   **H1:** O tempo de carregamento do conteúdo principal e interação (FCP/LCP) ocorre em menos de 2.5 segundos, caracterizando uma boa métrica web (Core Web Vitals).
+*   **Q2:** A estrutura e código do frontend evitam gargalos de execução no navegador (JavaScript não obstrutivo)?
+    *   **H2:** A execução do frontend não sobrecarrega a CPU do dispositivo cliente (Métrica Total Blocking Time (TBT) inferior a 300ms).
+*   **Q3:** Qual o desempenho global (Performance Score) aferido por ferramentas consolidadas de mercado?
+    *   **H3:** A nota consolidada de Performance do Lighthouse é igual ou superior a 90 em desktop e 80 em mobile.
 
-## Diagrama
+## 3. Nível Quantitativo: Métricas
+
+As métricas respondem as questões através de dados quantificáveis gerados pela ferramenta de avaliação definida.
+
+*   **M1 — Largest Contentful Paint (LCP) em segundos:** Tempo decorrido até que o maior elemento de texto ou imagem seja renderizado na tela. (Responde Q1).
+*   **M2 — Total Blocking Time (TBT) em milissegundos:** Soma do tempo de tarefas longas que bloqueiam a interação do usuário. (Responde Q2).
+*   **M3 — Lighthouse Performance Score (0-100):** Nota agregada de desempenho do frontend web (Responde Q3).
+
+## 4. Níveis de Pontuação e Critérios de Julgamento
+
+As métricas são avaliadas contra os critérios do ambiente web moderno. O julgamento será feito com auxílio da ferramenta Google Lighthouse, executada no frontend do projeto (pasta `site`).
+
+| Nível | M1 - LCP (Carregamento) | M2 - TBT (Bloqueio) | M3 - Lighthouse Score | Critério de Julgamento Geral (Eficiência) |
+| :--- | :--- | :--- | :--- | :--- |
+| **5 (Excelente)** | &lt;= 2.5s (Bom) | &lt;= 200ms (Bom) | >= 90 (Verde) | O sistema é altamente veloz. Os usuários não percebem lentidão ou travamentos durante a navegação pelo feed. |
+| **4 (Bom)** | > 2.5s e &lt;= 4.0s (Precisa melhorar) | > 200ms e &lt;= 600ms (Precisa melhorar)| >= 80 e &lt; 90 | Desempenho geral sólido. Ocorre leve demora no carregamento inicial, mas a experiência pós-carregamento é fluida. |
+| **3 (Satisfatório)**| > 4.0s e &lt;= 6.0s | > 600ms e &lt;= 1000ms | >= 65 e &lt; 80 (Laranja)| O tempo de resposta já afeta a experiência de forma perceptível. Algumas imagens do feed demoram a carregar. |
+| **2 (Insuficiente)**| > 6.0s (Ruim) | > 1000ms e &lt;= 2000ms (Ruim) | >= 40 e &lt; 65 | O sistema sofre gargalos graves. Usuários com redes móveis terão forte tendência a abandonar o site (bounce rate alto). |
+| **1 (Crítico)** | > 10s | > 2000ms | &lt; 40 (Vermelho) | Lentidão severa. O frontend trava ou não renderiza em tempo hábil para o uso. |
+
+## 5. Representação da Hierarquia GQM
 
 ![Diagrama GQM — Eficiência de Desempenho](diagrams/eficiencia.png)
 

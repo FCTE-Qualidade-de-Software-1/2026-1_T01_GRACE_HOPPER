@@ -1,43 +1,51 @@
+---
+title: Portabilidade
+sidebar_position: 4
+---
+
 # Portabilidade — Modelo GQM
 
-## Objetivo GQM
-- Analisar o sistema Mural UnB
-- Com o propósito de avaliar compatibilidade e adaptabilidade em diferentes ambientes e navegadores
-- Com respeito a Portabilidade (adaptabilidade, instalabilidade, substituibilidade)
-- Sob o ponto de vista de Estudantes da UnB
-- No contexto de acesso via navegadores desktop e mobile e diferentes sistemas operacionais
+A Portabilidade avalia a capacidade do sistema em operar efetivamente em diferentes ambientes tecnológicos, abrangendo a responsividade do frontend e a aderência a boas práticas (Best Practices e SEO).
 
-## Questões
-1. O sistema mantém funcionalidade e apresentação aceitáveis nos navegadores e versões alvo (Chrome, Firefox, Edge, Safari) e em dispositivos móveis?
-2. Existem diferenças funcionais ou de usabilidade significativas entre plataformas que afetem o acesso?
-3. O processo de deploy/instalação (back-end) e configuração em ambientes alvo é reproduzível e documentado?
-4. Quais componentes (CSS, JS, chamadas API) causam maior incompatibilidade entre plataformas?
+## 1. Nível Conceitual: Objetivo de Medição (GQM)
 
-## Hipóteses
-1. As funcionalidades essenciais são executadas corretamente nas versões de navegador alvo (>= 90% das funções testadas sem erros específicos de navegador).
-2. A interface é adaptativa e utilizável em tamanhos de tela mobile padrão sem perda de funcionalidade crítica.
-3. O deploy em ambientes documentados (ex.: Docker/CI) é reproduzível com as instruções existentes no repositório.
-4. Incompatibilidades são primariamente de apresentação (CSS) e não de lógica de negócio.
+Conforme a priorização na Fase 1, a Portabilidade é essencial devido à grande diversidade de dispositivos utilizados pelos estudantes para acessar oportunidades.
 
-## Métricas
-- M1 — Taxa de compatibilidade funcional por navegador: (% funcionalidades essenciais funcionando por navegador).
-- M2 — Número de defeitos específicos de navegador/ambiente detectados (contagem).
-- M3 — Percentual de resoluções/tamanhos de tela com layout comprometido identificado por checklist simples (ex.: pass/fail por breakpoint).
-- M4 — Tempo/complexidade para replicar deploy (horas ou passos documentados).
+*   **Analisar:** O frontend do sistema Mural UnB.
+*   **Para o propósito de:** Avaliar a adaptabilidade visual, acessibilidade e compatibilidade cruzada.
+*   **Com respeito à:** Portabilidade (Adaptabilidade e Compatibilidade Web).
+*   **Do ponto de vista de:** Usuários Finais (Estudantes da UnB).
+*   **No contexto de:** Acesso via diferentes navegadores web (Chrome, Firefox, Safari) e tamanhos de tela (Mobile e Desktop).
 
-## Tabela resumida
+## 2. Nível Operacional: Questões e Hipóteses
 
-| Questão | Métrica(s) principal(is) | Rubrica (exemplo) |
-|---|---|---|
-| Compatibilidade por navegador | M1: % funções funcionando por navegador | 5: >=98% — 1: <70% |
-| Diferenças entre plataformas | M2: defeitos por navegador | 5: 0–1 — 1: >=20 |
-| Layout/responsividade | M3: % breakpoints com problema | 5: 0–1% — 1: >20% |
-| Reprodutibilidade do deploy | M4: tempo/complexidade do deploy | medição em horas/etapas documentadas |
+*   **Q1:** A interface da aplicação se adapta corretamente aos dispositivos móveis sem perda de funcionalidade (Layout Responsivo)?
+    *   **H1:** Mais de 95% das páginas essenciais (Home e Feed) não apresentam sobreposição de elementos ou botões inacessíveis quando testados em resoluções de tela móvel no DevTools.
+*   **Q2:** A estrutura HTML e o código seguem as boas práticas universais e padrões web exigidos pelos navegadores modernos?
+    *   **H2:** A pontuação agregada de *Best Practices* do sistema é igual ou superior a 90 em testes automatizados, evitando problemas de compatibilidade silenciosos.
+*   **Q3:** A aplicação é adequadamente acessível e descritiva para indexadores ou tecnologias assistivas multiplataforma?
+    *   **H3:** A pontuação de *SEO / Accessibility* atinge pelo menos 85, assegurando que elementos gráficos possuem meta-tags e atributos estruturados.
 
-_Tabela — Resumo das questões, métricas e rubricas para Portabilidade._
+## 3. Nível Quantitativo: Métricas
 
-## Diagrama
+As métricas utilizam ferramentas e inspeções focadas puramente no frontend moderno (`site/`).
+
+*   **M1 — Taxa de Quebra de Layout em Mobile (%):** `(Telas com erro visual detectado / Total de Telas Analisadas) * 100`. (Responde Q1).
+*   **M2 — Lighthouse Best Practices Score (0-100):** Avaliação de confiança da arquitetura web baseada nos padrões do navegador Chrome (Responde Q2).
+*   **M3 — Lighthouse Accessibility & SEO Score Mínimo (0-100):** Menor nota obtida entre SEO e Acessibilidade (Responde Q3).
+
+## 4. Níveis de Pontuação e Critérios de Julgamento
+
+A ferramenta de validação será inspeção visual auxiliada pelo DevTools do navegador e execução do Google Lighthouse para garantir imparcialidade.
+
+| Nível | M1 - Taxa de Quebra de Layout | M2 - Best Practices Score | M3 - Accessibility/SEO Score | Critério de Julgamento Geral (Portabilidade) |
+| :--- | :--- | :--- | :--- | :--- |
+| **5 (Excelente)** | 0% (Nenhum layout quebra). | >= 95 | >= 95 | A aplicação funciona nativamente como uma experiência fluida em qualquer dispositivo ou navegador testado. |
+| **4 (Bom)** | &lt;= 10% (Pequenos desalinhamentos que não impedem o uso). | >= 85 e &lt; 95 | >= 85 e &lt; 95 | Excelente portabilidade, com raras exceções gráficas pontuais em telas muito reduzidas. |
+| **3 (Satisfatório)**| > 10% e &lt;= 20% | >= 70 e &lt; 85 | >= 70 e &lt; 85 | O site funciona em mobile, mas a experiência visual não é adequada e requer muito *scroll* horizontal ou botões difíceis de clicar. |
+| **2 (Insuficiente)**| > 20% e &lt;= 40% (Funcionalidades bloqueadas em mobile). | >= 50 e &lt; 70 | >= 50 e &lt; 70 | Apresenta falhas de renderização em determinados navegadores ou o Mobile é praticamente inavegável. |
+| **1 (Crítico)** | > 40% | &lt; 50 | &lt; 50 | Site desenvolvido estritamente para desktop de forma inflexível, violando normas W3C. |
+
+## 5. Representação da Hierarquia GQM
 
 ![Diagrama GQM — Portabilidade](diagrams/portabilidade.png)
-
-_Figura — Diagrama GQM para Portabilidade._
