@@ -57,7 +57,7 @@ O cronograma e a execução prática da avaliação deverão seguir rigorosament
 
 Após a etapa 3 de Coleta de Dados, as seguintes ações definirão o julgamento formal do produto de software:
 
-- **Consolidação de Dados:** Exportação e tabulação de todos os valores brutos coletados em uma planilha ou relatório centralizado (LCP em segundos, TBT em milissegundos, Scores de 0-100 do Lighthouse, porcentagem de quebra visual e número de falhas funcionais).
-- **Mapeamento de Níveis:** Enquadramento matemático dos valores brutos na escala unificada de Níveis de Pontuação (1 a 5) apresentada acima, utilizando as matrizes de cada documento GQM.
-- **Julgamento de Maturidade:** Agregação das notas das métricas para determinar o nível de maturidade global do Mural UnB em Adequação Funcional, Eficiência e Portabilidade.
-- **Elaboração do Parecer Técnico:** Redação do relatório final destacando as fortalezas (notas 4 e 5), as vulnerabilidades críticas (notas 1 e 2) e as recomendações de melhoria para a equipe de desenvolvimento.
+- **Consolidação de Dados (Fase 3):** Tabulação estruturada de todos os valores brutos coletados diretamente na página de relatório no Docusaurus (LCP, TBT, Scores do Lighthouse, fórmulas matemáticas aplicadas para M1/M2/M3, e anexação dos *print screens* de responsividade e completude).
+- **Mapeamento de Níveis (Fase 4):** Enquadramento matemático dos valores brutos na escala unificada de Níveis de Pontuação (1 a 5), utilizando as regras rigorosas definidas nas matrizes de cada documento GQM.
+- **Julgamento de Maturidade (Fase 4):** Agregação das notas e limiares das métricas para determinar formalmente o nível de maturidade global do Mural UnB em Adequação Funcional, Eficiência e Portabilidade.
+- **Elaboração do Parecer Técnico (Fase 4):** Redação do relatório final oficializando as fortalezas do software (níveis 4 e 5), evidenciando as vulnerabilidades críticas (níveis 1 e 2, como os gargalos em dispositivos móveis) e consolidando recomendações precisas de refatoração para a equipe de desenvolvimento.
