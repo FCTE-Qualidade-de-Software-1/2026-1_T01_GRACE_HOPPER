@@ -36,6 +36,9 @@ As métricas respondem as questões através de dados quantificáveis gerados pe
 *   **M2 — Total Blocking Time (TBT) em milissegundos:** Soma do tempo de tarefas longas que bloqueiam a interação do usuário. (Responde Q2).
 *   **M3 — Lighthouse Performance Score (0-100):** Nota agregada de desempenho do frontend web (Responde Q3).
 
+> **Nota de Rastreabilidade (Fase 1 → Fase 2):** O documento de escopo da Fase 1 mencionava FCP, LCP, CLS e TTFB como métricas candidatas. Na Fase 2, optou-se por priorizar **LCP** (por ser mais representativo do carregamento percebido pelo usuário do que o FCP, que mede apenas a primeira pintura parcial), **TBT** (por capturar diretamente o bloqueio de interação no navegador, substituindo a necessidade do TTFB no contexto frontend) e o **Lighthouse Performance Score** (que já incorpora FCP e CLS em sua fórmula ponderada com pesos de 10% e 25%, respectivamente). Dessa forma, as três métricas selecionadas cobrem indiretamente todos os indicadores planejados na Fase 1, com maior foco nas dimensões mais impactantes para a experiência do estudante.
+
+
 ## 4. Níveis de Pontuação e Critérios de Julgamento
 
 As métricas são avaliadas contra os critérios do ambiente web moderno. O julgamento será feito com auxílio da ferramenta Google Lighthouse, executada no frontend do projeto (pasta `site`).

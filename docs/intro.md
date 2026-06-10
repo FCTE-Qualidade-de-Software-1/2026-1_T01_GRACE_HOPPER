@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Introdução
 
-Essa avaliação faz parte da disciplina Qualidade de Software, onde a seguir terá uma avaliação de qualidade do software **Mural UnB**, O software se faz de uma centralização digital de opotunidades acadêmicas e extrecurriculares da Universidade de Brasília, que utiliza inteligência artificial e uma interface intuitiva para conectar estudantes a projetos, laboratórios e eventos.
+Esta avaliação faz parte da disciplina Qualidade de Software 1 (FGA0315) e tem como objetivo avaliar a qualidade do software **Mural UnB**. O Mural UnB consiste em uma plataforma de centralização digital de oportunidades acadêmicas e extracurriculares da Universidade de Brasília, que utiliza inteligência artificial e uma interface intuitiva para conectar estudantes a projetos, laboratórios e eventos.
 
 O projeto é mantido por uma equipe multidisciplinar de estudantes da FGA, o foco é criar uma solução aberta e colaborativa.
 
@@ -21,6 +21,15 @@ O projeto é mantido por uma equipe multidisciplinar de estudantes da FGA, o foc
   </tr>
 </table>
 </div>
+
+## Uso de IA
+
+Durante a elaboração deste trabalho, foi utilizada a ferramenta de inteligência artificial **Google Gemini** como apoio na redação de textos técnicos e estruturação dos documentos de avaliação. A IA foi empregada especificamente para:
+
+- Auxiliar na clareza e objetividade da exposição do conteúdo técnico;
+- Apoiar na padronização e formatação das tabelas de critérios de julgamento.
+
+Todo o conteúdo gerado pela IA foi **revisado, validado e ajustado pela equipe**. As decisões técnicas, os critérios de avaliação e os dados coletados são de autoria exclusiva da equipe.
 
 ## Tabela de Contribuição
 

@@ -1,10 +1,25 @@
 flowchart TB
-  ED["Eficiência de Desempenho"]
-  ED --> Q1E["Q1: Tempos de resposta"]
-  ED --> Q2E["Q2: Comportamento sob carga"]
-  ED --> Q3E["Q3: Utilização de recursos"]
-  ED --> Q4E["Q4: Impacto na aceitabilidade"]
-  Q1E --> M1E["M1: Tempo médio & % <=2s"]
-  Q2E --> M2E["M2: Throughput e erros"]
-  Q3E --> M3E["M3: CPU/Mem médios"]
-  Q4E --> M5E["M5: Taxa de abandono por latência"]
+  OBJ["Objetivo: Avaliar a resposta temporal\ne uso de recursos do frontend Mural UnB"]
+
+  OBJ --> Q1["Q1: Qual o tempo de carregamento\nda página principal e do feed\nde vagas para o usuário?"]
+  OBJ --> Q2["Q2: A estrutura e código do frontend\nevitam gargalos de execução\nno navegador?"]
+  OBJ --> Q3["Q3: Qual o desempenho global\n(Performance Score) aferido por\nferramentas consolidadas?"]
+
+  Q1 --> H1["H1: FCP/LCP ocorre em\nmenos de 2.5 segundos"]
+  Q2 --> H2["H2: TBT inferior a 300ms"]
+  Q3 --> H3["H3: Lighthouse Performance\n>= 90 desktop e >= 80 mobile"]
+
+  Q1 --> M1["M1: Largest Contentful\nPaint — LCP (s)"]
+  Q2 --> M2["M2: Total Blocking\nTime — TBT (ms)"]
+  Q3 --> M3["M3: Lighthouse\nPerformance Score (0-100)"]
+
+  style OBJ fill:#1a237e,color:#fff,stroke:#0d47a1,stroke-width:2px
+  style Q1 fill:#004d40,color:#fff,stroke:#00695c,stroke-width:2px
+  style Q2 fill:#004d40,color:#fff,stroke:#00695c,stroke-width:2px
+  style Q3 fill:#004d40,color:#fff,stroke:#00695c,stroke-width:2px
+  style H1 fill:#e65100,color:#fff,stroke:#bf360c,stroke-width:1px
+  style H2 fill:#e65100,color:#fff,stroke:#bf360c,stroke-width:1px
+  style H3 fill:#e65100,color:#fff,stroke:#bf360c,stroke-width:1px
+  style M1 fill:#4a148c,color:#fff,stroke:#6a1b9a,stroke-width:2px
+  style M2 fill:#4a148c,color:#fff,stroke:#6a1b9a,stroke-width:2px
+  style M3 fill:#4a148c,color:#fff,stroke:#6a1b9a,stroke-width:2px
