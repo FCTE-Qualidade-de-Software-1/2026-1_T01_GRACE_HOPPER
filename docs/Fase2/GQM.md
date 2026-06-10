@@ -27,4 +27,4 @@ Este GQM deriva diretamente dos artefatos produzidos na Fase 1. Referências dir
 
 Esses documentos servem como fonte para o objeto de análise, as perguntas e as hipóteses aqui propostas; as métricas selecionadas foram pensadas para serem instrumentáveis no ambiente técnico descrito na Fase 1.
 
-**Referências internas:** ver documentos da Fase 1 em `docs/Fase1/` para rastreabilidade e contexto.
+**Referências internas:** ver documentos da Fase 1 na seção [Fase1](../category/fase-1/) para rastreabilidade e contexto.

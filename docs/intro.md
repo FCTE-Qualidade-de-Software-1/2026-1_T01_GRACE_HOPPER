@@ -22,6 +22,10 @@ O projeto é mantido por uma equipe multidisciplinar de estudantes da FGA, o foc
 </table>
 </div>
 
+## Uso de IA
+
+Foi utilizado o uso de inteligência artificial em alguns textos e diagramas para auxiliar na clareza e objetividade da exposição do conteúdo.
+
 ## Tabela de Contribuição
 
 | Matrícula  | Aluno                   | Contribuição |

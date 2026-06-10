@@ -1,10 +1,25 @@
 flowchart TB
-  P["Portabilidade"]
-  P --> Q1P["Q1: Compatibilidade por navegador"]
-  P --> Q2P["Q2: Diferenças funcionais entre plataformas"]
-  P --> Q3P["Q3: Reprodutibilidade do deploy"]
-  P --> Q4P["Q4: Componentes problemáticos"]
-  Q1P --> M1P["M1: % funções funcionando por navegador"]
-  Q2P --> M2P["M2: Defeitos por navegador"]
-  Q3P --> M4P["M4: Tempo/complexidade do deploy"]
-  Q4P --> M3P["M3: % breakpoints com layout comprometido"]
+  OBJ["🎯 Objetivo: Avaliar adaptabilidade visual,\nacessibilidade e compatibilidade cruzada\ndo frontend Mural UnB"]
+
+  OBJ --> Q1["Q1: A interface se adapta\ncorretamente aos dispositivos\nmóveis sem perda de funcionalidade?"]
+  OBJ --> Q2["Q2: A estrutura HTML e código\nseguem boas práticas universais\ne padrões web exigidos?"]
+  OBJ --> Q3["Q3: A aplicação é acessível\ne descritiva para indexadores ou\ntecnologias assistivas multiplataforma?"]
+
+  Q1 --> H1["H1: Mais de 95% das páginas\nnão apresentam sobreposição\nou botões inacessíveis"]
+  Q2 --> H2["H2: Best Practices >= 90\nem testes automatizados"]
+  Q3 --> H3["H3: SEO/Accessibility >= 85\ncom meta-tags e atributos estruturados"]
+
+  Q1 --> M1["📊 M1: Taxa de Quebra de\nLayout em Mobile (%)"]
+  Q2 --> M2["📊 M2: Lighthouse Best\nPractices Score (0-100)"]
+  Q3 --> M3["📊 M3: Lighthouse Accessibility\n& SEO Score Mínimo (0-100)"]
+
+  style OBJ fill:#1a237e,color:#fff,stroke:#0d47a1,stroke-width:2px
+  style Q1 fill:#004d40,color:#fff,stroke:#00695c,stroke-width:2px
+  style Q2 fill:#004d40,color:#fff,stroke:#00695c,stroke-width:2px
+  style Q3 fill:#004d40,color:#fff,stroke:#00695c,stroke-width:2px
+  style H1 fill:#e65100,color:#fff,stroke:#bf360c,stroke-width:1px
+  style H2 fill:#e65100,color:#fff,stroke:#bf360c,stroke-width:1px
+  style H3 fill:#e65100,color:#fff,stroke:#bf360c,stroke-width:1px
+  style M1 fill:#4a148c,color:#fff,stroke:#6a1b9a,stroke-width:2px
+  style M2 fill:#4a148c,color:#fff,stroke:#6a1b9a,stroke-width:2px
+  style M3 fill:#4a148c,color:#fff,stroke:#6a1b9a,stroke-width:2px

@@ -1,11 +1,25 @@
 flowchart TB
-  AF["Adequação Funcional"]
-  AF --> Q1A["Q1: Cobertura das funcionalidades"]
-  AF --> Q2A["Q2: Correção funcional"]
-  AF --> Q3A["Q3: Relevância das respostas"]
-  AF --> Q4A["Q4: Funcionalidades ausentes"]
-  Q1A --> M1A["M1: Cobertura funcional (%)"]
-  Q2A --> M2A["M2: Taxa de sucesso (%)"]
-  Q2A --> M5A["M5: Taxa de defeitos"]
-  Q3A --> M3A["M3: Nota média de relevância (1-5)"]
-  Q4A --> M4A["M4: Qtde. funcionalidades ausentes"]
+  OBJ["🎯 Objetivo: Avaliar completude e correção funcional\ndo sistema Mural UnB"]
+
+  OBJ --> Q1["Q1: As funcionalidades essenciais\nestão implementadas e cobrem\nos requisitos definidos?"]
+  OBJ --> Q2["Q2: Qual é a taxa de correção\nfuncional nas operações de\nbusca e recomendação?"]
+  OBJ --> Q3["Q3: As informações retornadas\nsão adequadas e relevantes\npara o usuário final?"]
+
+  Q1 --> H1["H1: Mais de 90% das funcionalidades\nprioritárias estão implementadas"]
+  Q2 --> H2["H2: Taxa de sucesso >= 95%\nnos cenários de uso"]
+  Q3 --> H3["H3: Aceitação >= 80%\ndos dados exibidos"]
+
+  Q1 --> M1["📊 M1: Cobertura Funcional\nEssencial (%)"]
+  Q2 --> M2["📊 M2: Taxa de Sucesso\nOperacional (%)"]
+  Q3 --> M3["📊 M3: Completude dos Dados\nApresentados (%)"]
+
+  style OBJ fill:#1a237e,color:#fff,stroke:#0d47a1,stroke-width:2px
+  style Q1 fill:#004d40,color:#fff,stroke:#00695c,stroke-width:2px
+  style Q2 fill:#004d40,color:#fff,stroke:#00695c,stroke-width:2px
+  style Q3 fill:#004d40,color:#fff,stroke:#00695c,stroke-width:2px
+  style H1 fill:#e65100,color:#fff,stroke:#bf360c,stroke-width:1px
+  style H2 fill:#e65100,color:#fff,stroke:#bf360c,stroke-width:1px
+  style H3 fill:#e65100,color:#fff,stroke:#bf360c,stroke-width:1px
+  style M1 fill:#4a148c,color:#fff,stroke:#6a1b9a,stroke-width:2px
+  style M2 fill:#4a148c,color:#fff,stroke:#6a1b9a,stroke-width:2px
+  style M3 fill:#4a148c,color:#fff,stroke:#6a1b9a,stroke-width:2px
