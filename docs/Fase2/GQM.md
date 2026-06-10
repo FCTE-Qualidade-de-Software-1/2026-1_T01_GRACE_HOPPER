@@ -19,11 +19,11 @@ Este diretório contém as seções detalhadas do modelo GQM divididas por carac
 
 Este GQM deriva diretamente dos artefatos produzidos na Fase 1. Referências diretas:
 
-- Propósito e avaliação: [propositoAvaliacao.md](docs/Fase1/propositoAvaliacao.md)
-- Escopo do estudo: [escopo.md](docs/Fase1/escopo.md)
-- Objetivos e modelo de qualidade: [objetivo.md](docs/Fase1/objetivo.md), [modeloQualidade.md](docs/Fase1/modeloQualidade.md)
-- Características escolhidas: [caracteristicaEscolhidas.md](docs/Fase1/caracteristicaEscolhidas.md)
-- Partes interessadas e contexto: [partesInteressadas.md](docs/Fase1/partesInteressadas.md)
+- Propósito e avaliação: [propositoAvaliacao.md](../Fase1/propositoAvaliacao)
+- Escopo do estudo: [escopo.md](../Fase1/escopo)
+- Objetivos e modelo de qualidade: [objetivo.md](../Fase1/objetivo), [modeloQualidade.md](../Fase1/modeloQualidade)
+- Características escolhidas: [caracteristicaEscolhidas.md](../Fase1/caracteristicaEscolhidas)
+- Partes interessadas e contexto: [partesInteressadas.md](../Fase1/partesInteressadas)
 
 Esses documentos servem como fonte para o objeto de análise, as perguntas e as hipóteses aqui propostas; as métricas selecionadas foram pensadas para serem instrumentáveis no ambiente técnico descrito na Fase 1.
 
