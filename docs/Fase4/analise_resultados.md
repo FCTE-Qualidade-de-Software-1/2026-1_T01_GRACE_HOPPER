@@ -1,58 +1,44 @@
 ---
-title: Análise e Julgamento
+title: Análise e Julgamento dos Resultados
 sidebar_position: 1
 ---
 
-# Análise e Julgamento dos Resultados PREICSA MELHORAAARRRR
+# Fase 4 — Análise e Julgamento dos Resultados
 
-Nesta etapa crucial do processo de avaliação, os valores brutos extraídos durante a Fase 3 (Coleta de Evidências) foram confrontados matematicamente com as matrizes de decisão criadas na Fase 2 (Planejamento GQM). 
+Este documento consolida a etapa final do processo de avaliação de qualidade do sistema **Mural UnB**, seguindo o framework GQM (Goal–Question–Metric). Os dados brutos coletados na [Fase 3 — Coleta de Dados](../Fase3/coleta_dados.md) são aqui processados, enquadrados nos níveis de pontuação estabelecidos na [Fase 2 — Modelo GQM](../Fase2/GQM.md) e transformados em julgamentos de qualidade formais, respondendo a todas as Questões e Objetivos de Medição.
 
-O objetivo é transformar métricas cruas em um juízo de valor qualitativo sobre o sistema **Mural UnB**.
-
----
-
-## 1. Julgamento das Características Priorizadas
-
-Aplicamos as faixas de níveis (1 a 5) às métricas mapeadas.
-
-### 1.1. Portabilidade
-A capacidade do sistema de se adaptar a diferentes navegadores, tamanhos de tela e diretrizes web.
-
-- **Best Practices Score (100):** O código atende estritamente a todas as regras modernas avaliadas pelo Lighthouse. Enquadra-se no **Nível 5 (Excelente)**.
-- **Accessibility Score (95):** O uso correto de contrastes, labels em botões e HTML semântico atende com excelência às necessidades de tecnologias assistivas. Enquadra-se no **Nível 5 (Excelente)**.
-- **Layout Responsivo Visual (Taxa de Quebra):** A auditoria visual minuciosa (via capturas completas de tela simulando um iPhone 12 Pro) comprovou que as 3 telas mais críticas do sistema (Home, Mural e Sobre) operam com 0% de quebra visual. Elementos de navegação colapsam corretamente e o *Feed* redistribui os cards sem *overflow*. Enquadra-se no **Nível 5 (Excelente)**.
-
-> **Parecer de Portabilidade:** O sistema demonstra altíssima aderência multiplataforma. O código web está altamente maduro no que diz respeito às normas do W3C. A interface suporta perfeitamente a leitura em dispositivos móveis, consolidando-se como **Excelente**.
-
-### 1.2. Eficiência de Desempenho
-O quão rápido o sistema responde e carrega as oportunidades acadêmicas sob demanda.
-
-- **Performance Score Mobile (46):** Em um ambiente móvel com rede e CPU limitadas, o *score* sofre impacto. Enquadra-se no **Nível 2 (Insuficiente)**.
-- **Métricas Chave (LCP de 16.45s e TBT de 597ms):** Observou-se que a interface retarda a renderização da imagem principal (*Largest Contentful Paint*) e sofre com picos longos de processamento JavaScript (*Total Blocking Time*) que bloqueiam interações momentâneas na tela.
-
-> **Parecer de Eficiência:** Existe uma discrepância marcante que depende diretamente do poder de hardware do usuário. No contexto Mobile (o qual exige alta prioridade), a primeira carga sofre de gargalos graves (*bottlenecks*). A característica obtém nota de **Satisfatório/Bom para Desktop e Insuficiente para Mobile**. 
-
-### 1.3. Adequação Funcional
-A competência do sistema em apresentar exatamente o que os estudantes necessitam.
-
-- **Cobertura Funcional (M1 - 100%):** Todas as 3 funcionalidades prioritárias estão presentes e acessíveis. Enquadra-se no **Nível 5 (Excelente)**.
-- **Sucesso Operacional (M2 - 100%):** O lote de testes de pesquisa e recomendação via tag não gerou *crashes*, retornos de erro HTTP 500 ou telas em branco em 100% dos cenários amostrados. Enquadra-se no **Nível 5 (Excelente)**.
-- **Completude de Dados (M3 - 100%):** A auditoria dos *cards* atestou que 100% da amostra continha Título, Tag e Link Original perfeitamente legíveis. Enquadra-se no **Nível 5 (Excelente)**.
-
-> **Parecer de Adequação:** O coração da aplicação funciona exatamente como proposto. O modelo de dados extraído pelo backend é exposto de maneira íntegra e sem inconsistências. O sistema ganha conceito **Excelente**.
+O propósito desta análise é cumprir o uso pretendido dos resultados definido na [Fase 1 — Propósito da Avaliação](../Fase1/propositoAvaliacao.md): _"identificar pontos fortes, limitações e possíveis oportunidades de melhoria na plataforma"_, gerando recomendações concretas para a equipe de desenvolvimento e para os requisitantes da avaliação.
 
 ---
 
-## 2. Conclusão Final do Parecer Técnico
+## 1. Obtenção das Medidas e Rastreabilidade da Coleta
 
-A avaliação sistemática (baseada no modelo GQM e nas diretrizes da SQuaRE ISO/IEC 25010) atesta que o projeto **Mural UnB** é um produto de software funcionalmente forte, estruturalmente acessível e perfeitamente aderente às boas práticas do desenvolvimento web.
+As medidas foram obtidas seguindo integralmente os procedimentos e o método definidos no [Plano de Avaliação da Fase 3](../Fase3/plano_avaliacao.md). A tabela abaixo resume as condições de coleta e as evidências geradas, garantindo a verificabilidade de cada dado bruto.
 
-**Fortalezas do Produto (Manter e Evoluir):**
-- Adequação Funcional na integração Crawler-Frontend.
-- Excelência em Acessibilidade e SEO.
+### 1.1. Registro das Condições de Coleta
 
-**Vulnerabilidades Críticas (Ações de Refatoração Recomendadas):**
-- A **Eficiência de Desempenho no ambiente Mobile** demanda atenção imediata da equipe de desenvolvedores. Recomenda-se:
-  1. Otimizar e compactar as imagens que causam LCP alto.
-  2. Implementar *Lazy Loading* nos cards do Feed.
-  3. Reduzir e fragmentar os pacotes de JavaScript (bundles) que estão aumentando o TBT na carga inicial.
+| Item                    | Valor registrado                                                                                                           |
+| :---------------------- | :------------------------------------------------------------------------------------------------------------------------- |
+| Data da coleta          | Junho de 2026 (coletas realizadas entre 04/06/2026 e 08/06/2026, conforme cronograma da Fase 3).                           |
+| Sistema avaliado        | Mural UnB — frontend Next.js/React acessando API Django com base PostgreSQL.                                               |
+| Versão/Branch           | Branch `fase3-plano-avaliacao`, commit `ca34c78`.                                                                          |
+| Ambiente                | Ambiente local controlado, com backend rodando localmente e base de dados previamente populada pelos crawlers.             |
+| Navegador               | Google Chrome (versão mais recente estável), com DevTools e Lighthouse integrados.                                         |
+| Perfil Desktop          | Hardware integral do notebook de teste, sem throttling aplicado.                                                           |
+| Perfil Mobile           | Emulação iPhone 12 Pro (390×844px) via Chrome DevTools, com Simulated Throttling (CPU 4x slowdown, rede Fast 3G simulada). |
+| Repetições Lighthouse   | Cada teste Lighthouse foi executado 3 vezes por página/perfil; registrou-se a **mediana** como valor oficial.              |
+| Responsável pela coleta | Diogo Barboza (Lighthouse e evidências automatizadas), Ana Carolina e Raissa Oliveira (testes manuais funcionais).         |
+
+### 1.2. Evidências Documentadas
+
+Clique nos link para ser redirecionado.
+
+| Tipo de evidência                          | Localização no repositório                                                                                                        |
+| :----------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------- |
+| Relatório Lighthouse Mobile (HTML)         | [`static/relatorios/relatorio_lighthouse_mobile.html`](../Fase3/coleta_dados#21-relatório-de-auditoria---mobile-simulado)         |
+| Relatório Lighthouse Desktop (HTML)        | [`static/relatorios/relatorio_lighthouse_desktop.html`](../Fase3/coleta_dados#22-relatório-de-auditoria---desktop)                |
+| Capturas de tela Mobile (Home/Mural/Sobre) | [`static/img/home.png`](../Fase3/coleta_dados#25-auditoria-visual-de-responsividade-emulação-mobile)                              |
+| Capturas da calculadora Lighthouse         | [`static/img/lighthouse_calculator_mobile.jpeg`](../Fase3/coleta_dados#24-a-matemática-por-trás-da-calculadora-do-lighthouse)     |
+| Tabelas de testes manuais funcionais       | [Seção 3 do coleta_dados.md](../Fase3/coleta_dados#3-coleta-de-evidências-adequação-funcional) — checklists, cenários e amostras. |
+
+---
