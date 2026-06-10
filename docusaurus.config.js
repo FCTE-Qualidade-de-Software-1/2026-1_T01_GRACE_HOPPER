@@ -103,46 +103,70 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Docs",
+            title: "Navegação",
             items: [
               {
-                label: "Tutorial",
+                label: "Introdução",
                 to: "/docs/intro",
               },
+              {
+                label: "Fase 1 — Planejamento",
+                to: "/docs/Fase1/escopo",
+              },
+              {
+                label: "Fase 2 — Modelo GQM",
+                to: "/docs/Fase2/GQM",
+              },
+              {
+                label: "Fase 3 — Coleta de Dados",
+                to: "/docs/Fase3/plano_avaliacao",
+              },
+              {
+                label: "Fase 4 — Análise e Julgamento",
+                to: "/docs/Fase4/analise_resultados",
+              },
             ],
           },
           {
-            title: "Community",
+            title: "Projeto",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                label: "Repositório GitHub",
+                href: "https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T01_GRACE_HOPPER",
               },
               {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "X",
-                href: "https://x.com/docusaurus",
+                label: "Software Analisado — Mural UnB",
+                href: "https://muralunb.com.br",
               },
             ],
           },
           {
-            title: "More",
+            title: "Equipe Grace Hopper",
             items: [
               {
-                label: "Blog",
-                to: "/blog",
+                label: "Ana Carolina",
+                href: "https://github.com/anawcarol",
               },
               {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                label: "Davi Negreiros",
+                href: "https://github.com/DaviNegreiros",
+              },
+              {
+                label: "Diogo Barboza",
+                href: "https://github.com/Diogo-Barboza",
+              },
+              {
+                label: "João Guimarães",
+                href: "https://github.com/JoaoMarceloGCN",
+              },
+              {
+                label: "Raissa Oliveira",
+                href: "https://github.com/daisha19",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Versão: Entrega 2 · Disciplina: Qualidade de Software 1 (FGA0315) · Software Analisado: Mural UnB · Equipe Grace Hopper — ${new Date().getFullYear()}`,
       },
       prism: {
         theme: prismThemes.github,
